@@ -11,7 +11,7 @@ import java.util.Map;
 
 @RestController
 public class RegConfirmationController {
-    @PostMapping("/confirmation")
+    @PostMapping("/confirmReg")
     @ResponseStatus(HttpStatus.ACCEPTED)
     public Map<String, String> SortConfirmationRequests(@RequestBody StudentDetails studentDetails){
         Map<String, String> confirmationMessage = new HashMap<>();
