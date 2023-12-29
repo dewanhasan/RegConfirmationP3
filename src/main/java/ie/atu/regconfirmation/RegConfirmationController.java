@@ -15,8 +15,9 @@ public class RegConfirmationController {
     @ResponseStatus(HttpStatus.ACCEPTED)
     public Map<String, String> SortConfirmationRequests(@RequestBody StudentDetails studentDetails){
         Map<String, String> confirmationMessage = new HashMap<>();
-        confirmationMessage.put("Confirmation of registration", "Student name: " + studentDetails.getName() + ", Email: " + studentDetails.getEmail() +
-                ", Date of Birth: " + studentDetails.getDob() + ", Course: " + studentDetails.getCourse());
+        confirmationMessage.put("Confirmation of registration", "Student firstname: " + studentDetails.getFirstname() +
+                ";  Date of Birth: " + studentDetails.getDob() + ";  Status: " + studentDetails.getStatus() +
+                ";  Welcome to Atlantic Technological University. Please Enrol Student details to the database. Thank you");
         return confirmationMessage;
     }
 }
